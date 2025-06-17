@@ -1,30 +1,25 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chytré info</title>
+    <title>Responsive Navbar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="test.css" />
   </head>
   <body>
-    <nav>
-      <div class="logo">
-        <h1>Chytré <span>info</span></h1>
+    <nav class="navbar">
+      <h1 class="logo">Chytré <span>info</span></h1>
 
-        <div class="hamburger" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="nav-menu">
-        <div class="search-bar">
+
+      <div class="menu">
+        <div class="search">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path
               fill="#515159"
@@ -34,17 +29,14 @@
           <input type="text" />
           <button type="submit"><i class="fas fa-search"></i></button>
         </div>
-      </div>
-      <div class="nav-menu">
-        <div class="links">
+        <div class="nav-links">
           <a href="#">DOMŮ</a>
           <a href="#">O NÁS</a>
           <a href="#">KONTAKT</a>
         </div>
       </div>
     </nav>
-
-    <div class="features">
+    <section>
       <div class="feature">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <path
@@ -81,14 +73,36 @@
         </svg>
         <span>Vždy jasně!</span>
       </div>
-    </div>
+    </section>
     <main>
-      <section class="about">
-        <h2>O nás</h2>
-        <p>
-          Zabýváme se ověřováním informací — Chytré info je společnost, která se
-          specializuje na poskytování spolehlivých a ověřených informací...
-        </p>
+      <section>
+        <article>
+          <h2>O nás</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est cumque
+            similique numquam fugiat dolorum quod sunt, nulla tempora eligendi
+            aut laudantium, ut laborum corrupti voluptatum laboriosam iste
+            eveniet ad error?
+          </p>
+        </article>
+        <section class="news-container">
+            <div></div>
+            <img src="" alt="">
+            <article>
+                <div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <h3></h3>
+                <p></p>
+                <address>
+                    <p></p>
+                    <time datetime=""></time>
+                    <div class="dot"></div>
+                    <p></p>
+                </address>
+            </article>
+        </section>
       </section>
       <aside>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -97,34 +111,30 @@
             d="M163.9 136.9c-29.4-29.8-29.4-78.2 0-108s77-29.8 106.4 0l17.7 18 17.7-18c29.4-29.8 77-29.8 106.4 0s29.4 78.2 0 108L310.5 240.1c-6.2 6.3-14.3 9.4-22.5 9.4s-16.3-3.1-22.5-9.4L163.9 136.9zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5L192 512 32 512c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l36.8 0 44.9-36c22.7-18.2 50.9-28 80-28l78.3 0 16 0 64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0-16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l120.6 0 119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384c0 0 0 0 0 0l-.9 0c.3 0 .6 0 .9 0z"
           />
         </svg>
-        <h3><i class="fas fa-hand-holding-heart"></i> Srdce vždy na ruce</h3>
-        <p>
-          Věříme, že poskytování spolehlivých informací je klíčové pro
-          demokratickou společnost...
-        </p>
-        <button class="button">KONTAKTUJTE NÁS</button>
+        <h3>Srdce vždy na ruce</h3>
+        <p></p>
+        <button>KONTAKTUJTE NÁS</button>
       </aside>
     </main>
-    <div class="articles">
-      <div class="card">
-        <img src="img/article1.jpg" alt="Článek" />
-        <div class="tags">ŠÍŘENÍ · STUDIE</div>
-        <h4>Význam ověřování informací v digitální době</h4>
-        <p>
-          V tomto článku se zaměříme na to, proč je ověřování informací
-          důležité...
-        </p>
-      </div>
-    </div>
-    <footer>2023 © Chytré info, Matěj Cajthaml</footer>
+    <footer>
+
+    </footer>
     <script>
       const hamburger = document.querySelector(".hamburger");
-      const NavMenu = document.querySelectorAll(".nav-menu")
-      const secondNavMenu = document.querySelectorAll(".nav-menu")[1];
+      const menu = document.querySelector(".menu");
 
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
-        secondNavMenu.classList.toggle("active");
+        menu.classList.toggle("active");
+      });
+      const navLinks = document.querySelectorAll(".nav-links a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 768) {
+            hamburger.classList.remove("active");
+            menu.classList.remove("active");
+          }
+        });
       });
     </script>
   </body>
