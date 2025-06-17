@@ -581,3 +581,40 @@ body {
     min-height: 250px;
   }
 }
+
+
+/* smooth scrolování*/
+html {
+  scroll-behavior: smooth;
+}
+
+.feature {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.feature:nth-child(1) { animation-delay: 0.1s; }
+.feature:nth-child(2) { animation-delay: 0.2s; }
+.feature:nth-child(3) { animation-delay: 0.3s; }
+.feature:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.news-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideInUp 0.8s ease forwards;
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
